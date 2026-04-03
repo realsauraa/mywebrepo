@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>productgrid.com</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="productsgrid.css">
+    <style>
+         .rfq-banner {
+      background: linear-gradient(to right, #00BFFF, #00c4ff);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      border-radius: 12px;
+      margin: 30px 0;
+    }
+    .inquiry-banner {
+            background: linear-gradient(90deg, #87CEEB, #00BFFF);
+            color: white;
+            padding: 40px;
+            border-radius: 8px;
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .inquiry-form { background: white; padding: 20px; border-radius: 8px; color: #333; width: 400px; }
+        
+        
+
+  
+    </style>
+</head>
+
+<body>
+
+    <!-- ==================== HEADER NAVBAR ==================== -->
+    <header class="header">
+        <!-- Top Info Bar -->
+        <div class="tophead">
+           
+            </div>
+        </div>
+
+        <!-- Main Navbar - White Background -->
+        <div class="main-navbar">
+            <!-- Logo and Search Row -->
+            <div class="navbar-top">
+                 <a href="#" class="logo">
+                    <img src="assets/Layout/Brand/logo-colored.png" alt="DevHub Logo">
+                    
+                </a>
+                <div class="search-container">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search products, brands, categories...">
+                        <button class="search-btn">
+                            <i class="fas fa-search"></i>
+                            Search
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nav Links and User Actions Row -->
+            <nav class="navbar-bottom">
+                <ul class="nav-menu">
+<li><a href="index.html" class="nav-link">EcomWeb</a></li>
+                    <li><a href="product.html" class="nav-link">Product</a></li>
+                    <li><a href="productlisting.html" class="nav-link">ProductListing</a></li>
+                    <li><a href="productsgrid.html" class="nav-link active">ProductsGrid</a></li>
+                    <li><a href="index.html#brands" class="nav-link">Brands</a></li>
+                </ul>
+
+                <div class="header-actions">
+                    <a href="#" class="action-item">
+                        <i class="far fa-user"></i>
+                        <span>Account</span>
+                    </a>
+                    <a href="#" class="action-item">
+                        <i class="far fa-heart"></i>
+                        <span>Wishlist</span>
+                        <span class="badge">3</span>
+                    </a>
+                    <a href="#" class="action-item">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Cart</span>
+                        <span class="badge">5</span>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ==================== MAIN CONTENT ==================== -->
+   <div class="container">
+
+    <div class="main-layout">
+
+      <!-- Sidebar Filters -->
+      <aside class="sidebar">
+        <h3>Categories</h3>
+        <ul>
+          <li><a href="#">Smartphones</a></li>
+          <li><a href="#">Feature Phones</a></li>
+          <li><a href="#">Tablets</a></li>
+          <li><a href="#">Cameras</a></li>
+          <li><a href="#">Laptops</a></li>
+          <li><a href="#">Smart Watches</a></li>
+          <li><a href="#">Accessories</a></li>
+        </ul>
+
+        <h3 style="margin-top: 30px;">Brands</h3>
+        <ul>
+          <li><a href="#">Samsung</a></li>
+          <li><a href="#">Apple</a></li>
+          <li><a href="#">Xiaomi</a></li>
+          <li><a href="#">Oppo</a></li>
+          <li><a href="#">Vivo</a></li>
+          <li><a href="#">Infinix</a></li>
+        </ul>
+
+        <h3 style="margin-top: 30px;">Price Range</h3>
+        <ul>
+          <li><a href="#">Under $50</a></li>
+          <li><a href="#">$50 - $100</a></li>
+          <li><a href="#">$100 - $200</a></li>
+          <li><a href="#">$200 - $400</a></li>
+          <li><a href="#">Over $400</a></li>
+        </ul>
+      </aside>
+
+      <!-- Products Grid -->
+      <section class="products">
+
+        <a href="#" class="product-card">
+<img src="assets/Image/tech/image 33.png" alt="Red Phone" class="product-img">
+          <div class="product-info">
+            <div class="product-title">Redmi Note 13 Pro 5G (8+256) Mirror Black</div>
+            <div>
+              <span class="product-price">$248.00</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="#" class="product-card">
+<img src="assets/Image/tech/image 23.png" alt="Blue Phone" class="product-img">
+          <div class="product-info">
+            <div class="product-title">Samsung Galaxy S23 FE 5G (8/256GB) Graphite</div>
+            <div>
+              <span class="product-price">$349.00</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="#" class="product-card">
+<img src="assets/Image/tech/8.png" alt="iPhone" class="product-img">
+          <div class="product-info">
+            <div class="product-title">Apple iPhone 14 (128GB) Midnight</div>
+            <div>
+              <span class="product-price">$699.00</span>
+              <span class="old-price">$799.00</span>
+              <span class="product-discount">-13%</span>
+            </div>
+          </div>
+        </a>
+
+
+          <div class="product-info">
+            <div class="product-title">Canon EOS R50 Mirrorless Camera (Body Only)</div>
+            <div>
+              <span class="product-price">$679.00</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="#" class="product-card">
+<img src="assets/Image/tech/image 32.png" alt="Laptop" class="product-img">
+          <div class="product-info">
+            <div class="product-title">MacBook Air M2 13.6" 2022 (8GB/256GB) Starlight</div>
+            <div>
+              <span class="product-price">$899.00</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="#" class="product-card">
+<img src="assets/Image/tech/image 34.png" alt="Watch" class="product-img">
+          <div class="product-info">
+            <div class="product-title">Apple Watch Series 9 GPS 45mm Aluminum</div>
+            <div>
+              <span class="product-price">$399.00</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- aur jitne chahiye utne product-card copy-paste kar sakte ho -->
+
+      </section>
+
+    </div>
+  </div>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h4>About DevHub</h4>
+                <p>DevHub is a leading global e-commerce platform connecting millions of buyers and sellers worldwide.</p>
+                <div class="social-links">
+                    <a href="#facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#linkedin"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <div class="app-download-section">
+                    <div class="app-store-buttons">
+                        <a href="#" class="app-btn">
+                            <i class="fab fa-google-play"></i>
+                            <span class="btn-text">
+                                <span class="small-text">Get it on</span>
+                                <span class="big-text">Google Play</span>
+                            </span>
+                        </a>
+                        <a href="#" class="app-btn">
+                            <i class="fab fa-apple"></i>
+                            <span class="btn-text">
+                                <span class="small-text">Download on the</span>
+                                <span class="big-text">App Store</span>
+                            </span>
+                        </a>
+                        <img src="assets/Layout/Misc/Group.png" alt="Download App" style="height: 40px; margin-left: 10px;">
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Customer Service</h4>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Customer Support</a></li>
+                    <li><a href="#">Track Orders</a></li>
+                    <li><a href="#">Returns & Refunds</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>For Business</h4>
+                <ul>
+                    <li><a href="#">Become a Seller</a></li>
+                    <li><a href="#">Seller Center</a></li>
+                    <li><a href="#">Business Solutions</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 DevHub Corporation. All rights reserved.</p>
+            <div class="payment-methods">
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-cc-paypal"></i>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

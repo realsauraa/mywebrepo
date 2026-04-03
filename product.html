@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>White Long Sleeve T-shirt - DevHub Marketplace</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="product.css">
+    <style>
+    :root {
+      --primary: #2563eb;
+      --orange: #f97316;
+      --red: #dc2626;
+      --dark: #111827;
+      --gray: #6b7280;
+      --lightgray: #f3f4f6;
+      --border: #d1d5db;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #fff;
+      color: var(--dark);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    /* ────────────────────────────────────────
+       HEADER + BREADCRUMB
+    ──────────────────────────────────────── */
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 12px 0;
+      position: sticky;
+      top: 0;
+      background: white;
+      z-index: 100;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: var(--primary);
+    }
+
+    nav a {
+      margin-left: 24px;
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: 500;
+    }
+
+    .breadcrumb {
+      padding: 12px 0;
+      color: var(--gray);
+      font-size: 0.95rem;
+    }
+
+    .breadcrumb a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    /* ────────────────────────────────────────
+       MAIN PRODUCT AREA (top)
+    ──────────────────────────────────────── */
+    .product-main {
+      padding: 32px 0 48px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .gallery {
+      position: relative;
+    }
+
+    .main-photo {
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: #f9fafb;
+    }
+
+    .thumbnails {
+      display: flex;
+      gap: 12px;
+      margin-top: 16px;
+      flex-wrap: wrap;
+    }
+
+    .thumb {
+      width: 88px;
+      height: 88px;
+      object-fit: cover;
+      border: 2px solid transparent;
+      border-radius: 6px;
+      cursor: pointer;
+      opacity: 0.8;
+      transition: all 0.18s;
+    }
+
+    .thumb.active,
+    .thumb:hover {
+      opacity: 1;
+      border-color: var(--primary);
+    }
+
+    .product-info h1 {
+      font-size: 1.95rem;
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+
+    .price-block {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin: 20px 0 28px;
+    }
+
+    .current-price {
+      font-size: 2.25rem;
+      font-weight: 700;
+      color: var(--red);
+    }
+
+    .old-price {
+      font-size: 1.4rem;
+      color: var(--gray);
+      text-decoration: line-through;
+    }
+
+    .discount {
+      color: var(--orange);
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+    .variant-group {
+      margin: 24px 0;
+    }
+
+    .variant-group label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: 600;
+      font-size: 1.05rem;
+    }
+
+    .size-buttons,
+    .color-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .size-btn {
+      min-width: 48px;
+      height: 48px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: white;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .size-btn:hover,
+    .size-btn.active {
+      border-color: var(--primary);
+      background: #eff6ff;
+      color: var(--primary);
+    }
+
+    .color-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 2px solid white;
+      box-shadow: 0 0 0 2px var(--border);
+      cursor: pointer;
+    }
+
+    .color-btn.active {
+      box-shadow: 0 0 0 3px var(--primary);
+    }
+
+    .action-buttons {
+      display: flex;
+      gap: 16px;
+      margin: 32px 0 40px;
+    }
+
+    .btn {
+      flex: 1;
+      padding: 16px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      border: none;
+    }
+
+    .add-to-cart {
+      background: var(--primary);
+      color: white;
+    }
+
+    .add-to-cart:hover { background: #1d4ed8; }
+
+    .buy-now {
+      background: var(--orange);
+      color: white;
+    }
+
+    .buy-now:hover { background: #ea580c; }
+
+    /* ────────────────────────────────────────
+       DETAILS / DESCRIPTION (middle)
+    ──────────────────────────────────────── */
+    .product-details {
+      padding: 48px 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .details-layout {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 48px;
+    }
+
+    .description h2,
+    .specs h2 {
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+    }
+
+    .description p {
+      margin-bottom: 16px;
+      color: #374151;
+    }
+
+    ul.features {
+      padding-left: 20px;
+      list-style: disc;
+      margin: 20px 0;
+    }
+
+    ul.features li {
+      margin-bottom: 10px;
+    }
+
+    table.spec-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.98rem;
+    }
+
+    table.spec-table th,
+    table.spec-table td {
+      padding: 12px 16px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+
+    table.spec-table th {
+      background: var(--lightgray);
+      font-weight: 600;
+    }
+
+    /* ────────────────────────────────────────
+       RELATED / RECENTLY VIEWED (bottom)
+    ──────────────────────────────────────── */
+    .related-section {
+      padding: 60px 0 80px;
+      background: var(--lightgray);
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 1.8rem;
+      margin-bottom: 32px;
+    }
+
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 24px;
+    }
+
+    .product-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      transition: all 0.18s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    }
+
+    .card-image {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+    }
+
+    .card-body {
+      padding: 14px 16px;
+      text-align: center;
+    }
+
+    .card-title {
+      font-size: 1rem;
+      margin-bottom: 8px;
+      height: 2.5em;
+      overflow: hidden;
+    }
+
+    .card-price {
+      font-weight: 700;
+      color: var(--red);
+      font-size: 1.1rem;
+    }
+
+    /* ────────────────────────────────────────
+       RESPONSIVE
+    ──────────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .product-main,
+      .details-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .action-buttons {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .thumbnails {
+        justify-content: center;
+      }
+
+      .thumb {
+        width: 70px;
+        height: 70px;
+      }
+
+      h1 {
+        font-size: 1.7rem;
+      }
+
+      .current-price {
+        font-size: 1.9rem;
+      }
+
+      .section-title {
+        font-size: 1.5rem;
+      }
+    }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER (single instance) -->
+    <header class="header">
+        <!-- Top Info Bar -->
+        <div class="tophead"></div>
+
+        <!-- Main Navbar - White Background -->
+        <div class="main-navbar">
+            <!-- Logo and Search Row -->
+            <div class="navbar-top">
+                 <a href="index.html" class="logo">
+                    <img src="assets/Layout/Brand/logo-colored.png" alt="DevHub Logo">
+                </a>
+                <div class="search-container">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search products, brands, categories...">
+                        <button class="search-btn">
+                            <i class="fas fa-search"></i>
+                            Search
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nav Links and User Actions Row -->
+            <nav class="navbar-bottom">
+                <ul class="nav-menu">
+<li><a href="index.html" class="nav-link">EcomWeb</a></li>
+                    <li><a href="product.html" class="nav-link active">Product</a></li>
+                    <li><a href="productlisting.html" class="nav-link">ProductListing</a></li>
+                    <li><a href="productsgrid.html" class="nav-link">ProductsGrid</a></li>
+                    <li><a href="index.html#brands" class="nav-link">Brands</a></li>
+                </ul>
+
+                <div class="header-actions">
+                    <a href="#" class="action-item">
+                        <i class="far fa-user"></i>
+                        <span>Account</span>
+                    </a>
+                    <a href="#" class="action-item">
+                        <i class="far fa-heart"></i>
+                        <span>Wishlist</span>
+                        <span class="badge">3</span>
+                    </a>
+                    <a href="#" class="action-item">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Cart</span>
+                        <span class="badge">5</span>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="breadcrumb container">
+      Home › Men's Clothing › T-Shirts › White Long Sleeve T-shirt with Cotton Blend
+    </div>
+
+    <!-- TOP: Main product + gallery + price + variants -->
+    <section class="container product-main">
+      <div class="gallery">
+        <img src="assets/Image/tech/image 33.png" 
+             class="main-photo" alt="Product main image" id="mainPhoto">
+
+        <div class="thumbnails">
+          <img src="assets/Image/tech/image 33.png" class="thumb active" 
+               onclick="changeMain(this.src)">
+          <img src="assets/Image/tech/image 23.png" class="thumb" 
+               onclick="changeMain(this.src)">
+          <img src="assets/Image/tech/image 85.png" class="thumb" 
+               onclick="changeMain(this.src)">
+          <img src="assets/Image/tech/6.png" class="thumb" 
+               onclick="changeMain(this.src)">
+        </div>
+      </div>
+
+      <div class="product-info">
+        <h1>White Long Sleeve T-shirt with Cotton Blend (Light Grey)</h1>
+
+        <div class="price-block">
+          <span class="current-price">PKR 2,450</span>
+          <span class="old-price">PKR 3,200</span>
+          <span class="discount">23% OFF</span>
+        </div>
+
+        <div class="variant-group">
+          <label>Size</label>
+          <div class="size-buttons">
+            <button class="size-btn active">S</button>
+            <button class="size-btn">M</button>
+            <button class="size-btn">L</button>
+            <button class="size-btn">XL</button>
+            <button class="size-btn">XXL</button>
+          </div>
+        </div>
+
+        <div class="variant-group">
+          <label>Color</label>
+          <div class="color-buttons">
+            <button class="color-btn" style="background:#f3f4f6"></button>
+            <button class="color-btn" style="background:#d1d5db"></button>
+            <button class="color-btn" style="background:#9ca3af"></button>
+          </div>
+        </div>
+
+        <div class="action-buttons">
+          <button class="btn add-to-cart">Add to Cart</button>
+          <button class="btn buy-now">Buy Now</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- MIDDLE: Description + Specifications -->
+    <section class="product-details container">
+      <div class="details-layout">
+        <div class="description">
+          <h2>Product Description</h2>
+          <p>Premium quality long sleeve cotton blend t-shirt. Soft, breathable fabric with excellent stitching. Ideal for casual wear, office layering or daily use.</p>
+          <p>Pre-shrunk material maintains shape and color even after multiple washes.</p>
+
+          <ul class="features">
+            <li>Material: 80% Cotton + 20% Polyester</li>
+            <li>Fabric weight: 180–190 gsm</li>
+            <li>Regular fit</li>
+            <li>Ribbed cuffs and collar</li>
+            <li>Machine washable (cold water recommended)</li>
+            <li>Available in multiple colors & sizes</li>
+          </ul>
+        </div>
+
+        <div class="specs">
+          <h2>Specifications</h2>
+          <table class="spec-table">
+            <tr><th>Attribute</th><th>Value</th></tr>
+            <tr><td>Material</td><td>80% Cotton, 20% Polyester</td></tr>
+            <tr><td>Sleeve Style</td><td>Long Sleeve</td></tr>
+            <tr><td>Neck Type</td><td>Crew Neck</td></tr>
+            <tr><td>Fit Type</td><td>Regular Fit</td></tr>
+            <tr><td>Fabric Weight</td><td>180-190 gsm</td></tr>
+            <tr><td>Country of Origin</td><td>Pakistan</td></tr>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- BOTTOM: Related Products -->
+    <section class="related-section">
+      <div class="container">
+        <h2 class="section-title">Related Products</h2>
+
+        <div class="related-grid">
+          <div class="product-card">
+            <img src="assets/Image/tech/8.png" class="card-image" alt="Related product">
+            <div class="card-body">
+              <div class="card-title">Black Long Sleeve Cotton T-Shirt</div>
+              <div class="card-price">PKR 2,299</div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="assets/Image/tech/image 34.png" class="card-image" alt="Related product">
+            <div class="card-body">
+              <div class="card-title">Navy Blue Polo Shirt</div>
+              <div class="card-price">PKR 3,199</div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="assets/Image/tech/image 86.png" class="card-image" alt="Related product">
+            <div class="card-body">
+              <div class="card-title">Grey Oversized Hoodie</div>
+              <div class="card-price">PKR 4,490</div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="assets/Image/tech/image 32.png" class="card-image" alt="Related product">
+            <div class="card-body">
+              <div class="card-title">Denim Trucker Jacket</div>
+              <div class="card-price">PKR 5,999</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER (single instance) -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h4>About DevHub</h4>
+                <p>DevHub is a leading global e-commerce platform connecting millions of buyers and sellers worldwide.</p>
+                <div class="social-links">
+                    <a href="#facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#linkedin"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <div class="app-download-section">
+                    <div class="app-store-buttons">
+                        <a href="#" class="app-btn">
+                            <i class="fab fa-google-play"></i>
+                            <span class="btn-text">
+                                <span class="small-text">Get it on</span>
+                                <span class="big-text">Google Play</span>
+                            </span>
+                        </a>
+                        <a href="#" class="app-btn">
+                            <i class="fab fa-apple"></i>
+                            <span class="btn-text">
+                                <span class="small-text">Download on the</span>
+                                <span class="big-text">App Store</span>
+                            </span>
+                        </a>
+                        <img src="assets/Layout/Misc/Group.png" alt="Download App" style="height: 40px; margin-left: 10px;">
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Customer Service</h4>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Customer Support</a></li>
+                    <li><a href="#">Track Orders</a></li>
+                    <li><a href="#">Returns & Refunds</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>For Business</h4>
+                <ul>
+                    <li><a href="#">Become a Seller</a></li>
+                    <li><a href="#">Seller Center</a></li>
+                    <li><a href="#">Business Solutions</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 DevHub Corporation. All rights reserved.</p>
+            <div class="payment-methods">
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-cc-paypal"></i>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+function changeMain(src) {
+  document.getElementById('mainPhoto').src = src;
+  document.querySelectorAll('.thumb').forEach(el => el.classList.remove('active'));
+  event.target.classList.add('active');
+}
+
+// Simple size selection
+document.querySelectorAll('.size-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  });
+});
+    </script>
+</body>
+</html>
